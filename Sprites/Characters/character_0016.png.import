@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/character_0016.png-ddd5b4d3eddc6958b75d2831bc
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false

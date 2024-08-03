@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dah5oficfjopb"]
+
+[ext_resource type="TileSet" uid="uid://cop6bbbtjhis5" path="res://new_tile_set.tres" id="1_rehx1"]
+[ext_resource type="Script" path="res://Player.gd" id="2_bkf5g"]
+[ext_resource type="Texture2D" uid="uid://bqb4j84403j2a" path="res://Sprites/Characters/character_0000.png" id="3_psoj4"]
+[ext_resource type="PackedScene" uid="uid://d0l0l0kts0f3s" path="res://Enemy.tscn" id="4_pci1i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2idst"]
+height = 24.0
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_rehx1")
+format = 2
+layer_0/tile_data = PackedInt32Array(65533, 65536, 5, 65534, 131072, 5, 65535, 131072, 5, 0, 131072, 5, 1, 131072, 5, 2, 131072, 5, 3, 196608, 5, 6, 0, 5, -65522, 65536, 5, -65520, 196608, 5, -65521, 131072, 5, 131069, 65536, 6, 131070, 131072, 6, 65536, 131072, 6, 65537, 131072, 6, 65539, 196608, 6, 131075, 196608, 7, 196605, 65536, 7, 196606, 131072, 7, 196607, 131072, 7, 131072, 131072, 7, 131073, 131072, 7, 131074, 131072, 7, 65542, 0, 6, 131078, 0, 7, 14, 65536, 6, 65550, 65536, 6, 131086, 65536, 7, 15, 131072, 6, 65551, 131072, 6, 131087, 131072, 7, 65552, 196608, 6, 16, 196608, 6, 131088, 196608, 7, -131056, 524288, 4, -131053, 786432, 6, -131052, 851968, 6, -131051, 851968, 6, -131050, 851968, 6, -131049, 917504, 5, -196585, 851968, 4, -196584, 851968, 6, -196583, 851968, 6, -196582, 851968, 6, -196581, 917504, 4, -131045, 983040, 6, -131042, 983040, 6, -196578, 983040, 5, -262114, 983040, 5, -327650, 851968, 4, -327649, 851968, 6, -327648, 851968, 6, -327647, 851968, 6, -327646, 851968, 6, -327645, 917504, 6, -65534, 524288, 4, 9, 851968, 7, 10, 917504, 7, 11, 983040, 7, -2, 327680, 7, 131071, 131072, 6, 65538, 131072, 6)
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+position = Vector2(0, -12)
+script = ExtResource("2_bkf5g")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("3_psoj4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_2idst")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(3, 3)
+
+[node name="Enemy" parent="." instance=ExtResource("4_pci1i")]
+position = Vector2(64, -13)
+
+[node name="Enemy2" parent="." instance=ExtResource("4_pci1i")]
+position = Vector2(236, 13)
+
+[node name="Enemy3" parent="." instance=ExtResource("4_pci1i")]
+position = Vector2(451, -66)
+move_dir = Vector2(50, 0)
