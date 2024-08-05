@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbfuluu1uqkbb"]
+
+[ext_resource type="PackedScene" uid="uid://bcynk6uhbxbey" path="res://Chalange/Character.tscn" id="1_fn721"]
+[ext_resource type="PackedScene" uid="uid://dqtbqnictxyjo" path="res://Chalange/coin.tscn" id="2_mdqxw"]
+
+[node name="main" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_fn721")]
+position = Vector2(0, -1)
+
+[node name="Area2D" parent="." instance=ExtResource("2_mdqxw")]
+position = Vector2(90, -14)
+
+[node name="Area2D2" parent="." instance=ExtResource("2_mdqxw")]
+position = Vector2(54, -59)
+rotation = 2.61799
+scale = Vector2(1, 1)
+
+[node name="Area2D3" parent="." instance=ExtResource("2_mdqxw")]
+position = Vector2(-65, -94)
+rotation = 2.61799
+scale = Vector2(1, 1)
+
+[node name="Area2D4" parent="." instance=ExtResource("2_mdqxw")]
+position = Vector2(-160, 17)
+rotation = 2.61799
+scale = Vector2(1, 1)
+
+[node name="Area2D5" parent="." instance=ExtResource("2_mdqxw")]
+position = Vector2(-348, 171)
+rotation = 2.61799
+scale = Vector2(1, 1)
+
+[node name="Area2D6" parent="." instance=ExtResource("2_mdqxw")]
+position = Vector2(2, 28)
+rotation = 2.61799
+scale = Vector2(1, 1)
+
+[node name="Area2D7" parent="." instance=ExtResource("2_mdqxw")]
+position = Vector2(32, 22)
+rotation = 2.61799
+scale = Vector2(1, 1)
